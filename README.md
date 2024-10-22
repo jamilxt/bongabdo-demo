@@ -10,6 +10,15 @@ This is a demo of [Bongabdo - A Bengali Calendar Converter Library](https://gith
 ## What is Bongabdo?
 [Bongabdo](https://github.com/hasancse91/bongabdo) is a powerful Kotlin library that simplifies converting Gregorian dates to Bengali calendar dates (Bongabdo) for your Android or Java/Kotlin projects. It provides flexibility for regional variations and offers customization options.
 
+## Key Features:
+- **Easy Conversions:** Convert any Gregorian date to its corresponding Bengali date using two popular calculation methods:
+   - Bangla Academy: Used in Bangladesh
+   - Drik Shiddhanta: Used in India
+- **Extendable:** Easily implement additional calculation methods like Surjo Shiddhanta for further customization.
+- **Multilingual Support:** Currently offers English and Bengali localization, with options for extending to other languages.
+
+[## Getting Started](https://github.com/hasancse91/bongabdo/blob/main/README.md#getting-started)
+
 ## How to Build & Run
 1. Install Java 17 (LTS) of any distribution. You can try Amazon Corretto 17. You can find the installation instructions here: https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html
 2. Open this project with your preferred IDE. We prefer IntelliJ IDEA Ultimate Edition. Other IDEs like VS Code or Spring Tools Suite (STS) will do.
