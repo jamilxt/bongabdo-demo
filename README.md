@@ -1,6 +1,10 @@
 # Bongabdo Demo - Spring Boot (Kotlin)
 This is a demo of [Bongabdo - A Bengali Calendar Converter Library](https://github.com/hasancse91/bongabdo) using Spring Boot (Kotlin)
 
+## Implementation:
+- [Spring Boot (Java)](https://github.com/jamilxt/bongabdo-demo/tree/java)
+- [Android](https://github.com/hasancse91/bongabdo)
+
 ## What is Bongabdo?
 [Bongabdo](https://github.com/hasancse91/bongabdo) is a powerful Kotlin library that simplifies converting Gregorian dates to Bengali calendar dates (Bongabdo) for your Android or Java/Kotlin projects. It provides flexibility for regional variations and offers customization options.
 
