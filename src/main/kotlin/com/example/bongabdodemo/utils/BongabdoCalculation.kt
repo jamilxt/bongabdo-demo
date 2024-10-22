@@ -2,9 +2,9 @@ package com.example.bongabdodemo.utils
 
 import com.hellohasan.bongabdo.api.Bongabdo
 import com.hellohasan.bongabdo.api.BongabdoMethod
-import com.hellohasan.bongabdo.localization_config.BengaliLocalizationConfig
-import com.hellohasan.bongabdo.localization_config.BongabdoLocalizationConfig
-import com.hellohasan.bongabdo.localization_config.EnglishLocalizationConfig
+import com.hellohasan.bongabdo.localization.BengaliLocalizationConfig
+import com.hellohasan.bongabdo.localization.BongabdoLocalizationConfig
+import com.hellohasan.bongabdo.localization.EnglishLocalizationConfig
 import org.springframework.context.i18n.LocaleContextHolder
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,7 +20,7 @@ object BongabdoCalculation {
      */
     fun getBanglaAcademyBongabdo(calendar: Calendar): String {
         val bongabdo = Bongabdo.getInstance(BongabdoMethod.BANGLA_ACADEMY)
-        bongabdo.mLocalizationConfig = getLocalizationConfig()
+        bongabdo.localizationConfig = getLocalizationConfig()
         val bongabdoDate = bongabdo.getBongabdoData(
             calendar.get(Calendar.YEAR),
             calendar.get(Calendar.MONTH),
@@ -31,7 +31,7 @@ object BongabdoCalculation {
 
     fun getDrikShiddhantaBongabdo(calendar: Calendar): String {
         val bongabdo = Bongabdo.getInstance(BongabdoMethod.INDIAN_DRIK_SIDDHANTA)
-        bongabdo.mLocalizationConfig = getLocalizationConfig()
+        bongabdo.localizationConfig = getLocalizationConfig()
         val bongabdoDate = bongabdo.getBongabdoData(
             calendar.get(Calendar.YEAR),
             calendar.get(Calendar.MONTH),
