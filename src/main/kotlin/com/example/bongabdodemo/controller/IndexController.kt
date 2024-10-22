@@ -1,4 +1,4 @@
-package com.example.bongabdodemo
+package com.example.bongabdodemo.controller
 
 import com.example.bongabdodemo.utils.BongabdoCalculation.getBanglaAcademyBongabdo
 import com.example.bongabdodemo.utils.BongabdoCalculation.getCalendarFromString
