@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bongabdo Sample</title>
-    <link rel="stylesheet" href= "/stylesheet.css">
+    <link rel="stylesheet" href="/stylesheet.css">
 </head>
 <body>
 
@@ -14,23 +14,32 @@
     </div>
 
     <form action="#" th:action="@{/}" method="post" class="date-selector">
-        <h2><label for="gregorianDate">Select a Gregorian Calendar Date</label></h2>
-        <input type="date" id="gregorianDate" name="gregorianDate" th:value="${gregorianDate}" required><br>
-        <button type="submit">Convert Date</button>
+        <h2><label for="gregorianDate" th:text="#{hint.picker.date}">Select a Gregorian Calendar Date</label></h2>
+        <input type="date" id="gregorianDate" name="gregorianDate" th:value="${gregorianDate}" required onchange="this.form.submit()"><br>
     </form>
 
     <div class="output-section" th:if="${conversionAvailable}">
-        <h3 th:align="center">Output in Bongabdo Calendar</h3>
+        <h3 th:text="#{hint.output}" th:align="center"></h3>
 
         <div class="output-box">
-            <h3>Bangla Academy (Bangladesh)</h3>
+            <h3 th:text="#{title.bangla.academy}"></h3>
             <p th:text="${banglaAcademyOutput}"></p>
         </div>
 
         <div class="output-box">
-            <h3>Drik Shiddhanta (India)</h3>
+            <h3 th:text="#{title.drik.shiddhanta}"></h3>
             <p th:text="${drikShiddhantaOutput}"></p>
         </div>
+    </div>
+
+    <div class="footer-nav" th:align="center">
+        <form action="" method="get">
+            <h3><label for="lang-preference" th:text="#{lang.preference}"></label></h3>
+            <select id="lang-preference" name="lang" onchange="this.form.submit()">
+                <option value="en" th:text="#{lang.english}" th:selected="${#locale.language == 'en'}">English</option>
+                <option value="bn" th:text="#{lang.bengali}" th:selected="${#locale.language == 'bn'}">বাংলা</option>
+            </select>
+        </form>
     </div>
 </div>
 </body>
