@@ -22,7 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    implementation("com.github.hasancse91:bongabdo:1.0.1")
+    implementation("com.github.hasancse91:bongabdo:1.0.2")
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
